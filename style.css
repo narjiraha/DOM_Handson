@@ -1,0 +1,29 @@
+#cards-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    border: none;
+    cursor: pointer;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* #cards-container.flex-column .card {
+    background-color: aquamarine;
+} */

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" class="">
+    <title>DOM Handson</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h3>Q.1/ The code to access element which is having id as "text"</h3>
+    <pre>
+        ANS: let element = document.getElementById("text");
+        console.log(element)
+
+        This will retrieve the element with id attribute set to "text" and store it in the element variable.
+    </pre>
+
+    <h3>Q.2/ Write the code to access element which is having tag as "h1"</h3>
+    <pre>
+        ANS: let elementh1 = document.getElementsByTagName("h1");
+        console.log(elementh1)
+        Explanaton:
+        This code selects all the HTML elements with the tag name "h1" and assigns them to the variable elementh1. The
+        document.getElementsByTagName() method is used to retrieve all the elements with a specified tag name, in this case "h1
+    </pre>
+
+    <h3>Q.3/ Write the code to access element which is having class as "box"</h3>
+    <pre>
+        ANS: let getElementsByClassName = document.getElementsByClassName("box");
+        console.log(elements)
+
+        Explanaton:
+        This code selects all the HTML elements with the class name "box" and assigns them to the variable
+        getElementsByClassName. The document.getElementsByClassName() method is used to retrieve all the elements with a
+        specified class name, in this case "box".
+    </pre>
+
+    <h3>Q.4/ "Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h3>
+    <h1>Hello</h1>
+    <pre>
+            ANS:const heading = document.querySelector('h1');
+            
+            heading.textContent = "Hello World";
+            console.log(heading)
+
+            Explanation:
+            An HTML h1 element using the document.querySelector() method and assigns it to the const variable named heading. The
+            querySelector() method selects the first element.
+            The textContent property of the heading element is then modified by assigning it the new string value of "Hello World".
+            This will change the text content of the h1 element to "Hello World".
+        </pre>
+
+    <h3>
+        Q.5/ Create an HTML page having content as Hello world and a button named Replace Text. When user will click on
+        this button
+        page content should be changed to "Welcome to Elevation academy" </h3>
+
+    <pre>
+            ANS:function replaceText() {
+            document.getElementById("content").innerHTML = "Welcome to Elevation academy";
+            }
+
+            Explanation:
+            The function replaceText() will changes the content of an HTML element with the ID "content".
+            The document.getElementById() method is used to retrieve the HTML element with the ID of "content". The innerHTML
+            property of the retrieved element is then assigned a new string value of "Welcome to Elevation academy".
+            </pre>
+    <h2 id="content">Hello World</h2>
+    <button onclick="replaceText()">Replace Text</button>
+
+
+    <h3>Q.6/ Add one style attribute and give text color as red and id attribute and give the id value as ""heading""
+        in the above given h1 tag using DOM functions" </h3>
+
+    <h1 id="heading">Hello</h1>
+
+    <pre>
+        ANS:document.getElementById('heading').style.color = red;
+
+        Explanation:
+        The JavaScript code document.getElementById('heading').style.color = "red"; changes the color of the text inside an HTML
+        element with the ID "heading" to red.
+    </pre>
+
+    <h3>Q.7/ Create three cards on HTML page and arrange them using flex property in row or horizontal direction
+        and also create button at the bottom named "Change Flex direction".
+        When user clicks on this button, the cards arrangement should be changed to vertical direction.</h3>
+
+    <pre>
+     Ans:function changeDirection() {
+     var container = document.getElementById('cards-container');
+     container.classList.toggle('flex-column');
+    }
+    Explanation:
+    In the HTML code I have created a container with three card elements inside and a button that triggers a
+    JavaScript function when clicked.
+    
+    The container has an id attribute of named "cards-container".
+    
+    Inside the container, there are three card elements and a class attribute of card. The
+    class attribute can be used to apply CSS styles.
+    
+    Finally, there is a button element. This button has an onclick attribute that calls the
+    changeDirection() function when clicked. This function is not defined in the JavaScript code that I have mentioned in the above.
+    When the button is clicked, the changeDirection() function will be executed.
+  </pre>
+    <div id="cards-container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    <button onclick="changeDirection()">Change Direction</button>
+
+    <h3> Q.8/ What’s the difference between window vs document?</h3>
+    <table border="1">
+        <tbody>
+            <th>Document</th>
+            <th>Window</th>
+            <tr>
+                <td>1.It represents any HTML document or web page that is loaded in the browser.</td>
+                <td>1.It represents a browser window or frame that displays the contents of the webpage.</td>
+            </tr>
+            <tr>
+                <td>2.It is loaded inside the window.</td>
+                <td>2.It is the very first object that is loaded in the browser.</td>
+            </tr>
+            <tr>
+                <td>3.It is the object of window property..</td>
+                <td>3.It is the object of the browser.</td>
+            </tr>
+            <tr>
+                <td>4.All the tags, elements with attributes in HTML are part of the document.</td>
+                <td>4.Global objects, functions, and variables of JavaScript are members of the window object.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <h3>Q.9/ Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every
+        second
+    </h3>
+
+    <div class="firstBox">
+        <span id="time">TIME</span>
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id="sessions">AM</span>
+    </div> -->
+
+    <h3><a href="./clock/clock.html" blank>click here for question no 9(clock)</a></h3>
+    <h3><a href="./Game/game.html">Let's Play a game</a></h3>
+
+</body>
+
+</html>
